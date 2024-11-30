@@ -6,6 +6,8 @@ import { useRef } from 'react';
 
 export default function Sumskiwa0() {
   const categoriesRef = useRef<HTMLInputElement>(null);
+  const syllablesRef = useRef<HTMLInputElement>(null);
+
   return (
     <>
       <Typography variant="h1">0 Util</Typography>
@@ -29,7 +31,7 @@ export default function Sumskiwa0() {
                   S=šs
                   P=pbtdkg
                 `.replace(/ /g, '')}
-          ref={categoriesRef}
+          inputRef={categoriesRef}
           variant="outlined"
           disabled
           multiline
@@ -40,6 +42,32 @@ export default function Sumskiwa0() {
               categoriesRef.current.select();
               categoriesRef.current.setSelectionRange(0, 99999);
               navigator.clipboard.writeText(categoriesRef.current.value);
+            }
+          }}>
+          Copy
+        </Button>
+      </Box>
+      <Box
+        sx={{
+          display: 'flex'
+        }}>
+        <TextField
+          value={`CV
+                  SPV
+                  CVN
+                  SPVN
+                `.replace(/ /g, '')}
+          inputRef={syllablesRef}
+          variant="outlined"
+          disabled
+          multiline
+        />
+        <Button
+          onClick={() => {
+            if (syllablesRef.current) {
+              syllablesRef.current.select();
+              syllablesRef.current.setSelectionRange(0, 99999);
+              navigator.clipboard.writeText(syllablesRef.current.value);
             }
           }}>
           Copy

@@ -5,6 +5,9 @@ import Sumskiwa0 from './Sumskiwa0.tsx';
 import Sumskiwa1 from './Sumskiwa1.tsx';
 import Sumskiwa2 from './Sumskiwa2.tsx';
 import Sumskiwa3 from './Sumskiwa3.tsx';
+import Sumskiwa4 from './Sumskiwa4.tsx';
+import Sumskiwa5 from './Sumskiwa5.tsx';
+import Sumskiwa6 from './Sumskiwa6.tsx';
 import SumskiwaNavList from './SumskiwaNavList.tsx';
 
 export default function Sumskiwa() {
@@ -29,6 +32,9 @@ export default function Sumskiwa() {
         <Sumskiwa1 />
         <Sumskiwa2 />
         <Sumskiwa3 />
+        <Sumskiwa4 />
+        <Sumskiwa5 />
+        <Sumskiwa6 />
       </Stack>
     </Box>
   );

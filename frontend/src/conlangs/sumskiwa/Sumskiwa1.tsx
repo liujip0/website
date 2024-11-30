@@ -172,7 +172,7 @@ export default function Sumskiwa1() {
 }
 
 type ThProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 export function Th({ children }: ThProps) {
   return (

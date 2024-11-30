@@ -97,7 +97,9 @@ export default function Sumskiwa1() {
               </TableCell>
               <TableCell>noun case</TableCell>
               <TableCell>
-                {/*TODO link to patient definition*/}
+                {
+                  //TODO link to patient definition
+                }
                 patient of a transitive verb
               </TableCell>
             </TableRow>
@@ -172,11 +174,12 @@ export default function Sumskiwa1() {
 }
 
 type ThProps = {
+  colSpan?: number;
   children?: React.ReactNode;
 };
-export function Th({ children }: ThProps) {
+export function Th({ colSpan, children }: ThProps) {
   return (
-    <TableCell>
+    <TableCell colSpan={colSpan}>
       <Typography
         sx={{
           fontWeight: 'bold'

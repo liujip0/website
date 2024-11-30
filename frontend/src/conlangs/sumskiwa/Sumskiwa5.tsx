@@ -14,6 +14,7 @@ export const Lexicon: ({
   orthography?: string;
   romanization: string;
   definition: string;
+  notes?: string;
 } & (
   | {
       partOfSpeech: 'verb' | 'adjective' | 'adverb' | 'affix';
@@ -22,7 +23,25 @@ export const Lexicon: ({
       partOfSpeech: 'noun' | 'pronoun';
       gender: 'human' | 'animate' | 'inanimate';
     }
-))[] = [];
+))[] = [
+  {
+    romanization: 'žojem',
+    partOfSpeech: 'noun',
+    gender: 'inanimate',
+    definition: 'sun'
+  },
+  {
+    romanization: 'kiši',
+    partOfSpeech: 'noun',
+    gender: 'inanimate',
+    definition: 'light'
+  },
+  {
+    romanization: 'że',
+    partOfSpeech: 'verb',
+    definition: 'to give'
+  }
+];
 
 export default function Sumskiwa5() {
   return (
@@ -40,11 +59,12 @@ export default function Sumskiwa5() {
               <Th>Part of Speech</Th>
               <Th>Gender</Th>
               <Th>Definition</Th>
+              <Th>Notes</Th>
             </TableRow>
           </TableHead>
           <TableBody>
-            {Lexicon.map((word) => (
-              <TableRow>
+            {Lexicon.map((word, index) => (
+              <TableRow key={index}>
                 <TableCell>{word.orthography}</TableCell>
                 <TableCell>{word.romanization}</TableCell>
                 <TableCell>{word.partOfSpeech}</TableCell>
@@ -55,6 +75,7 @@ export default function Sumskiwa5() {
                     : '-'}
                 </TableCell>
                 <TableCell>{word.definition}</TableCell>
+                <TableCell>{word.notes}</TableCell>
               </TableRow>
             ))}
           </TableBody>

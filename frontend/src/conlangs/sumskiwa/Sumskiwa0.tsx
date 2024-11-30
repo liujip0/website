@@ -25,11 +25,11 @@ export default function Sumskiwa0() {
           display: 'flex'
         }}>
         <TextField
-          value={`C=šžszčjywcżpbtdkgmnñ
+          value={`C=szšždkgčjywcżpbtmnñ
                   V=iueoa
                   N=nñm
                   S=šs
-                  P=pbtdkg
+                  P=bdg
                 `.replace(/ /g, '')}
           inputRef={categoriesRef}
           variant="outlined"

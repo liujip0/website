@@ -11,9 +11,19 @@ export default function Sumskiwa6() {
           <GlossedTranslation
             phonetic="sażespažo dižojem šakiši"
             morphological="s-a-że-spa-žo di-žojem ša-kiši"
-            gloss="IND-PROG-give-INAN-INAN ERG-sun ACC-light"
+            gloss="IND-PROG-give-INAN-INAN <Gloss gloss='ERG' />-sun <Gloss gloss='ACC' />-light"
             translation="The sun shines."
             literalTranslation="The sun gives light."
+            indent={false}
+          />
+        </Li>
+        <Li>
+          <GlossedTranslation
+            phonetic="šgezu sażespažo dižojem šakiši"
+            morphological="šgezu s-a-że-spa-žo di-žojem ša-kiši"
+            gloss="YN IND-PROG-give-INAN-INAN <Gloss gloss='ERG' />-sun <Gloss gloss='ACC' />-light"
+            translation="Does the sun shine?"
+            literalTranslation="Does the sun give light?"
             indent={false}
           />
         </Li>
